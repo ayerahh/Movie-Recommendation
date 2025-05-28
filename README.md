@@ -28,7 +28,7 @@ A full-stack movie recommendation system that suggests movies based on user pref
 
 ## Project Structure
 
-
+```
 Movie Recommendation/
 ├── backend/
 │   ├── app.py                 # Flask backend server
@@ -43,9 +43,11 @@ Movie Recommendation/
 │   └── package.json         # Frontend dependencies
 │
 └── .env                     # Environment variables
-
+```
 
 ## Setup and Installation
+
+- To get the data model train the Movie_Recommendation_System.ipynb accordingly and get the model
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -55,55 +57,55 @@ Movie Recommendation/
 ### Backend Setup
 
 1. Create and activate virtual environment:
-bash
+```bash
 python -m venv .venv
 # On Windows
 .venv\Scripts\activate
 # On Unix or MacOS
 source .venv/bin/activate
-
+```
 
 2. Install Python dependencies:
-bash
+```bash
 pip install -r requirements.txt
+```
 
-
-3. Create .env file in the root directory:
-env
+3. Create `.env` file in the root directory:
+```env
 FLASK_ENV=development
 FLASK_DEBUG=1
 TMDB_API_KEY=your_tmdb_api_key
 PORT=5000
-
+```
 
 4. Run the Flask server:
-bash
+```bash
 python app.py
-
+```
 
 ### Frontend Setup
 
 1. Navigate to the project directory:
-bash
+```bash
 cd project
-
+```
 
 2. Install dependencies:
-bash
+```bash
 npm install
+```
 
-
-3. Create .env file in the project directory:
-env
+3. Create `.env` file in the project directory:
+```env
 VITE_API_URL=http://localhost:5000/api
-
+```
 
 4. Start the development server:
-bash
+```bash
 npm run dev
+```
 
-
-The application will be available at http://localhost:5173
+The application will be available at `http://localhost:5173`
 
 ## Data Processing
 
@@ -111,22 +113,21 @@ The system uses the TMDb 5000 Movie Dataset, which is processed using:
 - Natural Language Processing techniques
 - TF-IDF Vectorization
 - Cosine Similarity for recommendations
-- To get the model or data follow the ipynb file and train it accordingly
 
 ## API Endpoints
 
-- GET /api/health - Health check endpoint
-- GET /api/movies/search - Search movies by title
-- GET /api/movies/recommendations - Get movie recommendations
-- GET /api/movies/<id>/poster - Get movie poster
-- GET /api/movies/<id> - Get movie details
+- `GET /api/health` - Health check endpoint
+- `GET /api/movies/search` - Search movies by title
+- `GET /api/movies/recommendations` - Get movie recommendations
+- `GET /api/movies/<id>/poster` - Get movie poster
+- `GET /api/movies/<id>` - Get movie details
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (git checkout -b feature/AmazingFeature)
-3. Commit your changes (git commit -m 'Add some AmazingFeature')
-4. Push to the branch (git push origin feature/AmazingFeature)
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ## License
